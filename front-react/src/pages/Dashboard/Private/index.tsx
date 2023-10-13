@@ -1,8 +1,11 @@
 import React from 'react'
+import Converstation from '../../../components/Converstation'
 
 const Private = () => {
   return (
-    <div>Private</div>
+    <div>
+      <Converstation />
+    </div>
   )
 }
 

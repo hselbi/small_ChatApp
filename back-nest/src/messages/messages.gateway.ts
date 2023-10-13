@@ -16,6 +16,11 @@ export class MessagesGateway {
   // Inject the MessagesService into the gateway
   constructor(private readonly messagesService: MessagesService) {}
 
+  // Handle connection of a new client
+  handleConnection(client) {
+    console.log(`## Messages dir ===> ${client.id}\n`);
+  }
+
   // Subscribe to the 'createMessage' event
   @SubscribeMessage('createMessage')
   async create(@MessageBody() createMessageDto: CreateMessageDto) {

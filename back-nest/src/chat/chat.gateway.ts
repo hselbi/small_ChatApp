@@ -15,7 +15,7 @@ export class ChatGateway {
   // constructor(private readonly chatApp)
   // print id of connection with front
   handleConnection(client) {
-    console.log(client.id);
+    console.log(`Chat dir ===> ${client.id}\n`);
   }
   @SubscribeMessage('message')
   handleMessage(@MessageBody() message: string): void {
